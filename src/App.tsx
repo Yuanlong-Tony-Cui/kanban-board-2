@@ -11,7 +11,7 @@ type Task = {
 const columns = ['To Do', 'Doing', 'Done'];
 
 const initialTasks: Task[] = [
-  { id: 1, title: 'Create a Kanban board app', column: 0 },
+  { id: 1, title: 'Create a non-drag-and-drop Kanban board app where cards can be moved with buttons', column: 0 },
   { id: 2, title: 'Buy groceries', column: 1 },
   { id: 3, title: 'Have a party', column: 2 },
 ];

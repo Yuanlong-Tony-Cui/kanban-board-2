@@ -1,15 +1,6 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: #f0f2f5;
-  overflow-x: hidden;
-}
-
 .kanban-board {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 20px;
-  overflow-x: auto;
-  white-space: nowrap; /* Prevent columns from wrapping */
 }
