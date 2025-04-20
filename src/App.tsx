@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import KanbanColumn from './components/KanbanColumn';
+
+type Task = {
+  id: number;
+  title: string;
+  column: number;
+};
+
+const columns = ['To Do', 'Doing', 'Done'];
+
+const initialTasks: Task[] = [
+  { id: 1, title: 'Create a Kanban board app', column: 0 },
+  { id: 2, title: 'Buy groceries', column: 1 },
+  { id: 3, title: 'Have a party', column: 2 },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tasks, setTasks] = useState<Task[]>(initialTasks);
+
+  const moveTask = (id: number, direction: -1 | 1) => {
+    setTasks(prev =>
+      prev.map(task =>
+        task.id === id ? { ...task, column: task.column + direction } : task
+      )
+    );
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="kanban-board">
+      {columns.map((title, index) => (
+        <KanbanColumn
+          key={index}
+          title={title}
+          columnIndex={index}
+          maxColumn={columns.length - 1}
+          tasks={tasks.filter(task => task.column === index)}
+          onMove={moveTask}
+        />
+      ))}
+    </div>
+  );
 }
 
-export default App
+export default App;
