@@ -3,7 +3,6 @@
     border: 1px solid #dcdcdc;
     border-radius: 8px;
     height: 120px;
-    /* Fixed height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,16 +17,6 @@
     padding-right: 4px;
 }
 
-/* Optional: Add nice scrollbar style */
-.task-content::-webkit-scrollbar {
-    width: 6px;
-}
-
-.task-content::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 4px;
-}
-
 .task-actions {
     display: flex;
     justify-content: space-between;
@@ -40,4 +29,9 @@
     background-color: #4caf50;
     color: white;
     cursor: pointer;
+}
+
+.move-button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
 }

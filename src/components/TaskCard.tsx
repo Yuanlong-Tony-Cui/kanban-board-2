@@ -13,22 +13,26 @@ type Props = {
 };
 
 export default function TaskCard({ task, onMove, maxColumn }: Props) {
+  const { id, column } = task;
+
   return (
     <div className="task-card">
-      <div className="task-content">
-        {task.title}
-      </div>
+      <div className="task-content">{task.title}</div>
       <div className="task-actions">
-        {task.column > 0 && (
-          <button className="move-button" onClick={() => onMove(task.id, -1)}>
-            ◀
-          </button>
-        )}
-        {task.column < maxColumn && (
-          <button className="move-button" onClick={() => onMove(task.id, 1)}>
-            ▶
-          </button>
-        )}
+        <button
+          className="move-button"
+          disabled={column === 0}
+          onClick={() => onMove(id, -1)}
+        >
+          ◀
+        </button>
+        <button
+          className="move-button"
+          disabled={column === maxColumn}
+          onClick={() => onMove(id, 1)}
+        >
+          ▶
+        </button>
       </div>
     </div>
   );
