@@ -3,4 +3,10 @@
   flex-direction: row;
   gap: 16px;
   padding: 20px;
+
+  height: 100vh;
+  background-image: url(
+    https://fastcdn.mihoyo.com/content-v2/nap/155759/e08ff3a4968d377ebbc93469576a498a_3643639860485990389.jpg
+  ); 
+  background-size: cover;
 }

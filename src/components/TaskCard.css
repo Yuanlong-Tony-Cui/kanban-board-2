@@ -1,5 +1,5 @@
 .task-card {
-    background-color: #fefefe;
+    background-color: rgb(255, 255, 255);;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
