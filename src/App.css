@@ -6,7 +6,8 @@
 
   height: 100vh;
   background-image: url(
-    https://fastcdn.mihoyo.com/content-v2/nap/155759/e08ff3a4968d377ebbc93469576a498a_3643639860485990389.jpg
-  ); 
+    https://fastcdn.hoyoverse.com/content-v2/nap/114225/608830bc6382b73079821aed7b19fda8_8240430244310614598.jpg
+  );
+  background-position: right;
   background-size: cover;
 }
