@@ -2,7 +2,7 @@
 
 Button-Driven Kanban is a frontend application that tracks to-do tasks in a cleaner way.
 
-<img src="src/assets/Kanban-Board-V2.png" height="500" alt="Kanban App">
+<img src="src/assets/Kanban-Board-V2.png" alt="Kanban App">
 
 ## Motivation
 
