@@ -1,8 +1,8 @@
 .kanban-board {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
   height: 100vh;
   background-image: url(
@@ -10,4 +10,41 @@
   );
   background-position: right;
   background-size: cover;
+}
+
+.kanban-canvas {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex: 1; /* grow to fill all the remaining vertical space */
+}
+
+.kanban-title {
+  font-size: 40px;
+  margin: 10px auto; /* modifies default vertical margin for h2 */
+}
+
+.task-input {
+  display: flex;
+  gap: 8px;
+  width: 300px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+  border: 0px; /* removes default border for input */
+  border-radius: 4px;
+}
+
+.task-input button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: white;
+  color: #343434;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

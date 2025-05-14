@@ -11,6 +11,7 @@
 .task-content {
     height: 80px;
     overflow-y: auto;
+    font-size: 16px;
 }
 
 .task-actions {

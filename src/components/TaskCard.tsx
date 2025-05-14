@@ -25,16 +25,12 @@ export default function TaskCard({ task, onMove, maxColumn }: Props) {
                     className="move-button"
                     disabled={column === 0}
                     onClick={() => onMove(id, -1)}
-                >
-                    { column > 0 ? "◀️" : "🚫" }
-                </button>
+                > ◀️ </button>
                 <button
                     className="move-button"
                     disabled={column === maxColumn}
                     onClick={() => onMove(id, 1)}
-                >
-                    { column < maxColumn ? "▶️" : "🚫" }
-                </button>
+                > ▶️ </button>
             </div>
         </div>
     );
